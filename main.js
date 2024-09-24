@@ -37,6 +37,7 @@ app.on('ready', () => {
         }
     });
     mainWindow.loadFile('index.html');
+    mainWindow.webContents.openDevTools();
 });
 
 //Switch to an app when receiving the correct IPC event
@@ -49,6 +50,10 @@ ipcMain.on("Request-App", (event, args) => {
     else {
         mainWindow.loadURL(url1);
     }
+})
+
+ipcMain.on("Request-Dash", (event, args) => {
+    mainWindow.loadFile("index.html");
 })
 
 function createPasswordWindow() {
