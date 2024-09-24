@@ -43,31 +43,11 @@ body{
     min-height: 100vh;
 }
 
-
-[data-theme="light"] {
-    --color-bg: #ffffff;
-    --color-fg: #363636;
-}
-
 [data-theme="dark"] {
     --color-bg: #121212;
     --color-fg: #ffffff;
 }
 
-
-.themeButton {
-    display: block;
-    float: left;
-    width: 50px;
-    height: 50px;
-
-    background-color: transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
-}
 
 .buttonPanel{
     height: 60%;
@@ -75,13 +55,13 @@ body{
 }
 
 .buttonRow{
-    height: 50%;
+    height: 70%;
     padding: 2.5px 0;
 }
 
 .buttonWrapper {
     display: inline-block;
-    width: 33%;
+    width: 45%;
 }
 
 .quitButton {

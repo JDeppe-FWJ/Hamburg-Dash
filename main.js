@@ -41,8 +41,14 @@ app.on('ready', () => {
 
 //Switch to an app when receiving the correct IPC event
 ipcMain.on("Request-App", (event, args) => {
-    url = "http://localhost:400" + args["ID"]
-    mainWindow.loadURL(url);
+    url0 = "http://localhost/Bass"
+    url1 = "http://localhost/Film"
+    if (args["ID"] === 0){
+        mainWindow.loadURL(url0);
+    }
+    else {
+        mainWindow.loadURL(url1);
+    }
 })
 
 function createPasswordWindow() {
