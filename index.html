@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <title>Title Placeholder</title>
+  </head>
+
+  <header>
+    <button type="button" data-theme-toggle aria-label="Change to dark theme" class="themeButton"> <img data-theme-toggle-img> </button>
+    <img src="Assets/Placeholder.svg" alt="Töne Logo" class="logoToene">
+    <h1>Title Placeholder</h1>
+  </header>
+
+  <script>
+    const ipcRenderer = require("electron").ipcRenderer;
+    const remote = require("electron").remote;
+    function startApp(id){
+      let data = {ID: id}
+      let event = "Request-App";
+
+      ipcRenderer.send(event, data);
+    }
+    function closeApp(){
+      let data = {}
+      let event = "Request-Quit"
+
+      ipcRenderer.send(event, data);
+    }
+  </script>
+
+  <body>
+    <button type="button" onclick="closeApp()" class="quitButton"> 🚫 </button>
+
+    <div class="buttonPanel">
+      <div class="buttonRow">
+        <div class="buttonWrapper">
+          <button type="button" onclick="startApp(0)">Hörbeeinträchtigungen Exponat</button>
+        </div>
+        <div class="buttonWrapper">
+          <button type="button" onclick="startApp(1)">Hörtest Exponat</button>
+        </div>
+        <div class="buttonWrapper">
+          <button type="button" onclick="startApp(4)">McGurk Effekt Exponat</button>
+        </div>
+      </div>
+
+      <div class="buttonRow">
+        <div class="buttonWrapper">
+          <button type="button" onclick="startApp(2)">Instrumente Ratespiel Exponat</button>
+        </div>
+        <div class="buttonWrapper">
+          <button type="button" onclick="startApp(3)">Liedermacher Exponat</button>
+        </div>
+        <div class="buttonWrapper">
+          <button type="button" onclick="startApp(5)">Töne Hannovers Exponat</button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+</html>
