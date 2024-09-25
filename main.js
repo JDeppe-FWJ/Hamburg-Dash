@@ -37,7 +37,6 @@ app.on('ready', () => {
         }
     });
     mainWindow.loadFile('index.html');
-    mainWindow.webContents.openDevTools();
 });
 
 //Switch to an app when receiving the correct IPC event

@@ -67,6 +67,15 @@ body{
     width: 45%;
 }
 
+.textPanel {
+    height: 20%;
+    width: 90%;
+}
+.textWrapper {
+    width: 45%;
+    display: inline-block;
+}
+
 .quitButton {
     width: 60px;
     height: 60px;
