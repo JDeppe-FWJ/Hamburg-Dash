@@ -5,6 +5,7 @@ const WebSocket = require("ws");
 
 let mainWindow;
 let passwordWindow;
+let creditsWindow;
 
 //Create the main BrowserWindow once the electron app is ready
 app.on('ready', () => {
@@ -88,3 +89,21 @@ ipcMain.on("submit-password", (event, password) => {
         event.reply('password-result', 'Incorrect password');
     }
 });
+
+function createCreditsWindow() {
+    creditsWindow = new BrowserWindow({
+        width: 600,
+        height: 800,
+        modal: true, // To make it appear on top of the main window
+        parent: mainWindow, // Reference to your main window
+    });
+    creditsWindow.removeMenu();
+    creditsWindow.loadFile('credits.html');
+    creditsWindow.on('closed', () => {
+        creditsWindow = null;
+    });
+}
+
+ipcMain.on("Request-Credits", (event, args) => {
+    createCreditsWindow();
+})

@@ -24,11 +24,12 @@ button {
 
 header {
     height: 20%;
-    position: absolute;
+    position: fixed;
     top: 15px;
+    z-index: 1000;
 }
 
-h1 {
+.Title {
     position: absolute;
     left: 100px;
     top: 30px;
@@ -53,8 +54,10 @@ body{
 
 
 .buttonPanel{
+    position:absolute;
     height: 60%;
     width: 90%;
+    top: 15%;
 }
 
 .buttonRow{
@@ -68,12 +71,15 @@ body{
 }
 
 .textPanel {
+    position: absolute;
     height: 20%;
     width: 90%;
+    top: 50%;
 }
 .textWrapper {
     width: 45%;
     display: inline-block;
+    position:relative;
 }
 
 .quitButton {
@@ -83,6 +89,18 @@ body{
     position: fixed;
     right: 50px;
     bottom: 50px;
+    z-index: 1000;
+
+    font-size:xx-large;
+}
+
+.creditsButton {
+    width: 60px;
+    height: 60px;
+    
+    position: fixed;
+    right: 50px;
+    bottom: 120px;
     z-index: 1000;
 
     font-size:xx-large;
