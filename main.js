@@ -93,8 +93,6 @@ ipcMain.on("submit-password", (event, password) => {
 
 function createExtraWindow() {
     extraWindow = new BrowserWindow({
-        width: 600,
-        height: 700,
         modal: true, // To make it appear on top of the main window
         parent: mainWindow, // Reference to your main window
     });
@@ -106,6 +104,8 @@ function createExtraWindow() {
 
 ipcMain.on("Request-Credits", (event, args) => {
     createExtraWindow();
+    extraWindow.setSize(600, 700);
+    extraWindow.center();
     extraWindow.loadFile('credits.html');
 })
 
@@ -113,5 +113,7 @@ ipcMain.on("Request-Text", (event, args) => {
     file = args==="film" ? "filmText.html" : "bassText.html";
     
     createExtraWindow();
+    extraWindow.setSize(800, 1000);
+    extraWindow.center();
     extraWindow.loadFile(file);
 })
