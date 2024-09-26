@@ -1,11 +1,12 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
+const { create } = require('node:domain');
 const path = require('node:path')
 const WebSocket = require("ws");
 
 
 let mainWindow;
 let passwordWindow;
-let creditsWindow;
+let extraWindow;
 
 //Create the main BrowserWindow once the electron app is ready
 app.on('ready', () => {
@@ -90,20 +91,27 @@ ipcMain.on("submit-password", (event, password) => {
     }
 });
 
-function createCreditsWindow() {
-    creditsWindow = new BrowserWindow({
+function createExtraWindow() {
+    extraWindow = new BrowserWindow({
         width: 600,
         height: 700,
         modal: true, // To make it appear on top of the main window
         parent: mainWindow, // Reference to your main window
     });
-    creditsWindow.removeMenu();
-    creditsWindow.loadFile('credits.html');
-    creditsWindow.on('closed', () => {
-        creditsWindow = null;
+    extraWindow.removeMenu();
+    extraWindow.on('closed', () => {
+        extraWindow = null;
     });
 }
 
 ipcMain.on("Request-Credits", (event, args) => {
-    createCreditsWindow();
+    createExtraWindow();
+    extraWindow.loadFile('credits.html');
+})
+
+ipcMain.on("Request-Text", (event, args) => {
+    file = args==="film" ? "filmText.html" : "bassText.html";
+    
+    createExtraWindow();
+    extraWindow.loadFile(file);
 })
