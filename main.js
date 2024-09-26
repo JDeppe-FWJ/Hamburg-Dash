@@ -93,7 +93,7 @@ ipcMain.on("submit-password", (event, password) => {
 function createCreditsWindow() {
     creditsWindow = new BrowserWindow({
         width: 600,
-        height: 800,
+        height: 700,
         modal: true, // To make it appear on top of the main window
         parent: mainWindow, // Reference to your main window
     });

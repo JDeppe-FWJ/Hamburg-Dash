@@ -1,7 +1,4 @@
 * {
-    width: 100%;
-    height: 100%;
-
     margin: 0;
     padding: 0;
 
@@ -9,11 +6,24 @@
     font-weight: 400;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
+    height: auto;
 }
 
 td {
     width: auto;
+}
+
+h3 {
+    padding: 5px 5px;
 }
