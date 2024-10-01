@@ -79,7 +79,7 @@ ipcMain.on("Request-Quit", (event, args) => {
 })
 //Check whether the password is correct when it is submitted and quit if it is.
 ipcMain.on("submit-password", (event, password) => {
-    const pass = "123";
+    const pass = "123"; //Change the value of this variable to change the quit password.
     
     if (password === pass) {
         if(passwordWindow) {
