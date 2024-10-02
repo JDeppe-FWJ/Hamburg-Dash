@@ -22,6 +22,8 @@ button {
     border: none;
     overflow: hidden;
     outline: none;
+
+    font-size: large;
 }
 
 header {
