@@ -22,6 +22,9 @@ button {
     border: none;
     overflow: hidden;
     outline: none;
+
+    font-size: x-large;
+    font-weight: 700;
 }
 
 header {
@@ -112,27 +115,57 @@ body{
     font-size:xx-large;
 }
 
-.logoUHH {
+.logoTöne {
     float: right;
-    width: 200px;
-    height: 200px;
-    position: relative;
-    top: -30px;
-    right: -10px;
+    width: 150px;
+    height: 150px;
+    padding-right: 30px;
+}
+
+
+.logoUHH {
+    width: 150px;
+    height: 150px;
+
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
 }
 
 .logoLigeti {
-    float: right;
     width: 210px;
     height: 130px;
-    position: relative;
+
+    position: absolute;
+    bottom: 30px;
+    left: 210px;
 }
 
 .logoMKG {
-    float: right;
     width: 200px;
     height: 61px;
-    position: relative;
-    right: 30px;
-    top: 30px;
+
+    position: absolute;
+    bottom: 50px;
+    left: 450px;
+}
+
+.creditsDash {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    height: 50px;
+    width: 100%;
+}
+
+.filmButton {
+    background-image: url(Assets/BG_Arousal.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.bassButton {
+    background-image: url(Assets/bassbtn.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
