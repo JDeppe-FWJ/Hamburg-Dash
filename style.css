@@ -125,7 +125,7 @@ body{
 
 .logoUHH {
     width: 150px;
-    height: 150px;
+    height: 170px;
 
     position: absolute;
     bottom: 30px;
@@ -137,8 +137,11 @@ body{
     height: 130px;
 
     position: absolute;
-    bottom: 30px;
+    bottom: 50px;
     left: 210px;
+    
+    background-color: #ffffff;
+    background-size: 100% 40%;
 }
 
 .logoMKG {
@@ -165,7 +168,11 @@ body{
 }
 
 .bassButton {
+    background-color: #191919;
     background-image: url(Assets/bassbtn.png);
+    
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 75% 100%;
+    
+    padding-left: 150px;
 }
