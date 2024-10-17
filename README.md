@@ -2,8 +2,8 @@
 
 
 ### 1 - Apache & Original Files
-Install the Apache Webserver by running `sudo apt install apache2` in a terminal. 
-Then remove the 2 project folders to apche's folder (/var/www/html) and remove the default content. The file structure should then look like this:
+Install the Apache Webserver by running `sudo apt install apache2` in a terminal. \
+Then move the 2 project folders to apche's folder (/var/www/html) and remove the default content. The file structure should then look like this:
 
 ```
 |-- var
