@@ -3,6 +3,7 @@
 
 ### 1 - Apache & Original Files
 Install the Apache Webserver by running `sudo apt install apache2` in a terminal. \
+Disable Apache autostarting, since this is handled by the start script and apache may interfere with the webserver used for the other projects. Do so by running `systemctl disable apache2` \
 Then move the 2 project folders to apche's folder (/var/www/html) and remove the default content. The file structure should then look like this:
 
 ```
